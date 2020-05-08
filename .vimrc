@@ -1,3 +1,9 @@
+" Plugins 
+" Put in at the top so I can change something I don't like below it
+
+call plug#begin()
+call plug#end()
+
 " Fix programming structure with default vim options
 filetype plugin on
 set nocompatible

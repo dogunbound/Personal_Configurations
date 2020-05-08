@@ -8,3 +8,5 @@ Created Friday 08 May 2020
 This project will expose me to make files, linux programming, and learn cool shit.
 
 
+This project will be a multi threaded game about automation. I will combine Towns, Minecraft, and Factorio all into one game.
+
