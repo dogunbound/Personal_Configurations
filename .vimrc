@@ -1,8 +1,10 @@
-" Plugins 
-" Put in at the top so I can change something I don't like below it
 
 call plug#begin()
 call plug#end()
+
+"This is for YCM
+set encoding=utf-8
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 
 " Fix programming structure with default vim options
 filetype plugin on
@@ -16,7 +18,7 @@ filetype plugin indent on								" Autoindent
 set smartindent
 autocmd Bufread,BufWritePre *.sh normal gg=G
 
-set ts=4 sw=4
+set ts=5 sw=5
 
 " More general additions
 set mouse=v
