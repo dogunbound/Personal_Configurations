@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-06-25T11:35:24-05:00
+
+====== Topological Order ======
+Created Thursday 25 June 2020
+
+Topological order
+Order in which nodes should be visited so that every predecessor is visited before its successors
+Example: the nodesw of G represent courses in a major program. Predecessors to a node represent its prerequisites
+Topological oder can be determined using breadth-first or depth-first algorithms
+Assumption: the graph has no cycles
+
+BFT Topological
+1. Create array predCount and initialize it so that predCount[i] = number of predecessors of vertex v
+2. initialize queue and add vertices with no predecessors
+3. while queue is not empty
+	a. remove first element u
+	b. add u to topologicalOrder array
+	c. decrtement predecessor counts of successors of u
+		1. if count goes to 0, add successor to queue
+

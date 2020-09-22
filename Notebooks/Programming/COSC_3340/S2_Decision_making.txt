@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-08-26T13:08:04-05:00
+
+====== S2 Decision making ======
+Created Wednesday 26 August 2020
+
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+DFA: Deterministic finite automata
+
+An example problem:
+{{./pasted_image002.png}} last strip is in an even state
+On the table, what is in the top right is a lower case delta. Describes the set of states.
+
+{{./pasted_image003.png}}
+
+
+
+
+
+
+{{./pasted_image005.png}}
+On the right, the 0 1 0 0 1 2 0 1 2 2 represents q0, q1, q0, q0, q1, q2, q0, q1, q2, q2
+
+To be a yes, it needs to land on q2.
+

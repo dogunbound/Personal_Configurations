@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-06-18T10:43:09-05:00
+
+====== Hashing ======
+Created Thursday 18 June 2020
+All hashing is is a way to immediately get to an index in the hash table using a formula
+
+i.e.:
+{{./pasted_image.png}}
+
+The numbers returned are both keys and indexes.
+Each index in the array is called a bucket
+
+
+
+
+
+
+
+
+
+
+
+
+Collisions and overflow
+
+If two keys lead to the same bucket, we have a collision
+If we have too many collisions, we get overflow and can't insert any more items
+
+
+How to deal with collisions:
+probing strategies.
+
+
+Open addressing:
+Quadratic probing
+rehashing
+random probing 
+linear probing
+
+
+
+Linear probing: if location is occupied, move to the next index.
+{{./pasted_image001.png}}
+
+Problem with linear probing: clustering. 
+
+
+
+
+
+
+Chaining:
+2D array or linked list off of array.
+Prevents clustering, and the need for open addressing.
+

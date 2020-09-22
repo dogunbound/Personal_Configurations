@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-08-24T13:30:31-05:00
+
+====== S1 Problem solving ======
+Created Monday 24 August 2020
+
+{{./pasted_image.png}} This is fr  for peroblems with yes/no answers
+CF: context-free
+
+you go circle to circle.
+
+More difficult the further out the you go.
+
+We need to know how to find out what level of difficulty our problem is.
+
+
+Models of computation
+	- finite representation
+
+1. mach8ine / automata
+	a. recognizer
+2. grammer
+3. recursive function theory (Mathematics)
+{{./pasted_image001.png}}
+{{./pasted_image002.png}} ignore the mouse
+
+TM: Touring machine
+FA: Finite automata
+PDA: Push down automata
+
+
+{{./pasted_image003.png}}
+Solvable computation models. Oh this is easy to understand because I had a good teacher for discrete.
+
+
+
+{{./pasted_image004.png}}
+I have no idea what this is for.
+
+
+{{./pasted_image005.png}}  
+{{./pasted_image006.png}}REPLACE EPSILON WITH SIGMA for the above
+
+
+We need to know set theory. 
+

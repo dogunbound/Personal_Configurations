@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-09T17:31:23-05:00
+
+====== S3 Instructions ======
+Created Wednesday 09 September 2020
+
+OPERATIONS:
+ISAs
+
+Simple instruction set vs complex instruction set.
+
+Arm / Assembly / MIPS is used in machines that don't need an OS.
+
+Assembly is far afster than any programming language.
+
+
+Java used to be a compiler than runs as you write. TOO SLOW!!!
+
+
+
+OPERANDS:
+{{./pasted_image.png}}{{./pasted_image002.png}}
+Big Endian is for MIPS. The order works form biggest to smallest
+
+
+
+
+
+
+
+{{./pasted_image003.png}}
+
+
+
+
+
+
+{{./pasted_image004.png}}{{./pasted_image005.png}}

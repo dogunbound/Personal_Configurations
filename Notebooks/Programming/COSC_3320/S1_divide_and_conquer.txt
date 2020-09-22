@@ -1,0 +1,131 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-01T16:32:19-05:00
+
+====== S1 divide and conquer ======
+Created Tuesday 01 September 2020
+
+Problem is solved recursively:
+	divide:
+	conquer:
+	combine:
+	
+	
+Example: Merge sort
+T(n)= 2T(n/2) + BTheta(n) n>1
+T(1)= BigTheta(1) base case
+2 T(n/2): subproblem size multioply by number of subproblems
+BigTheta(n): Complexity of merging subarrays
+
+
+
+
+
+Ex of divide and conquer:
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+
+
+
+
+{{./pasted_image002.png}}this  is genius
+
+{{./pasted_image003.png}}{{./pasted_image004.png}}
+
+
+Finding time complexity of recursive algorithm**********************************************************************************************************************
+SOLVING reccurences
+
+substiution method is one way to solve algorithms
+
+
+Guessing may work
+example of substitution
+{{./pasted_image005.png}}
+
+
+
+
+
+{{./pasted_image007.png}}
+
+
+
+
+
+
+
+
+
+
+Solving a problem
+{{./pasted_image008.png}}{{./pasted_image009.png}}{{./pasted_image010.png}}{{./pasted_image011.png}}
+
+
+
+
+
+
+{{./pasted_image012.png}}{{./pasted_image013.png}}{{./pasted_image014.png}}f
+
+
+
+
+
+
+
+
+Another example
+{{./pasted_image015.png}}
+
+
+
+
+The master theorem
+{{./pasted_image026.png}}
+
+case 1:
+{{./pasted_image018.png}}{{./pasted_image027.png}}
+
+case 2:
+{{./pasted_image016.png}}{{./pasted_image028.png}}
+
+case 3: 
+{{./pasted_image017.png}} {{./pasted_image029.png}}
+
+
+
+Sometimes master theorem does not apply. Like T(n) = T(n^0.5) + ... . Our b = n^0.5, but there are tricks
+
+
+
+
+
+
+
+
+
+
+
+NO ASSUMPTIONS:
+
+{{./pasted_image019.png}} 0
+{{./pasted_image021.png}}
+{{./pasted_image022.png}}
+
+
+
+
+
+
+
+The median linear time finding algorithm is a divide and conquer algorithm. idk how they did divide and conquer for a median.
+
+
+{{./pasted_image023.png}}{{./pasted_image024.png}}{{./pasted_image025.png}}
+
+Manuel Blum Scientist to do research on.
+
+
+
+

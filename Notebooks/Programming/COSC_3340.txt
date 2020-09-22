@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-08-24T12:55:56-05:00
+
+====== COSC 3340 ======
+Created Monday 24 August 2020
+
+Automata and computer 

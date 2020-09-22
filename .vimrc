@@ -5,6 +5,9 @@ call plug#end()
 "This is for YCM
 set encoding=utf-8
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+let g:ycm_max_diagnostics_to_display = 0
+" This is to disable ycm diagnostics/syntax showing temporarily
+let g:ycm_show_diagnostics_ui = 0
 
 " Fix programming structure with default vim options
 filetype plugin on
@@ -18,6 +21,8 @@ filetype plugin indent on								" Autoindent
 set smartindent
 autocmd Bufread,BufWritePre *.sh normal gg=G
 
+set completeopt-=preview
+
 set ts=5 sw=5
 
 " More general additions
@@ -30,7 +35,9 @@ cmap w!! w !sudo tee % > /dev/null
 
 " C++ mappings
 inoremap {c {<Esc>o<Esc>i}<Esc>k$a
+inoremap {C {<Esc>o<Esc>i}<Esc>k$a
 inoremap {c; {<Esc>o<Esc>i};<Esc>k$a
+inoremap {C; {<Esc>o<Esc>i};<Esc>k$a
 nnoremap <F8> : !g++ -fsyntax-only %<Enter>
 nnoremap <F7>c : w<Esc>: e %:r.cpp<Enter>
 nnoremap <F7>h : w<Esc>: e %:r.h<Enter>

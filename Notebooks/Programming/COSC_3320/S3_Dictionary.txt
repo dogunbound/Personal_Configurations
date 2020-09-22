@@ -1,0 +1,106 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-15T16:05:26-05:00
+
+====== S3 Dictionary ======
+Created Tuesday 15 September 2020
+
+Dictionary operations
+	INSERT
+		store, using item's key
+	DELETE
+		Remove, using item's key
+	SEARCH
+		Return if item stored
+
+direct addressing can waste a lot of space.
+
+
+
+
+
+Hashing / Hash Tables
+Hash tables requires a lot less space
+O(K) complexity
+
+
+Collision solving:
+	Chaining
+		Insert O(1)
+		Delete O(1)
+			if given a pointer to the object, and the chaining is a doubly linked list
+		Search OMEGA(n)
+		{{./pasted_image.png}}
+		
+		This is average case analysis
+	Hash functions
+		A good hash function:
+			satisfies the assumpiton of simple uniform hashing: each key is equally likely to hash to any of the m slots, independently of where any other key has hashed to
+			easy to compute
+		it is very hard to satisfy the simple uniform hashing property
+			This is because it is hard toget keys that are truly independent.
+		minimize the chance that closely related keys hash to the same slot.
+		derive the hash value in a way that is expected to be independent from any patterns that might exist in the data.
+		Three ways to find a good hash funciton
+			division method
+				Map a key k into one of m slots by taking the remainder of k divided by m:
+					h(k) = k % m
+				Avoid powers of 2
+				avoid non-prime numbers
+			multiplication method
+				First we multiply the key k by a constant A in the range 0 < A < 1 and extract the fracti\onal part of kA
+				h(k) = floor(m ((k * A) % 1)))
+				where kA % 1 means the fractional part of kA, that is, kA - floor(kA)
+				Advantage: value of m is not critical.
+			universal hashing
+				A fixed hash function is vulnerable to worst-case behavior.
+				Fix: Choose a hash funciton randomly independent from keys to be stored. This is universal hashing.
+				Advantages:
+					The algorithm can behave differently on each execution, even for the same input
+					Guaranteeing good average-case performance for any input
+					poor performance occurs only when the compiler chooses a random hash funciton that causes the set of identifiers to hash poorly, but the probability of this situation occurring is small
+					Good average case runtime.
+				Technique:
+					Select a hash funciton at random, from a designed class of funcitons at the beginning of the execution. After that the hash funciton is fixed.
+				{{./pasted_image003.png}}
+				Based on number theory:
+					{{./pasted_image004.png}}
+					{{./pasted_image005.png}}
+				Perfect hashing
+					Worst case will be O(1)
+					Assumption - static set of keys (once a key is stored, no changes)
+					size of table for j is square of n 
+					use secondary hashing to handle collisions
+					Important to use a good hash function
+						good distribution ofkey hashs
+						not overly expensive to calculate
+
+		Opening addresing
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

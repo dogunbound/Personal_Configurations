@@ -1,0 +1,180 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-08T10:09:52-05:00
+
+====== CH6 relationalAlgebra ======
+Created Tuesday 08 September 2020
+
+A(i)
+A is the relation, i is the relationship
+
+
+
+Relational algebra is the basic set of operations for the relational model.
+
+These operationns enable a user to specify bsic retrieval requests or queries
+
+The result of an operation is a **new relation**.
+
+
+Reltional algebra overview
+	Unary relational operations
+		SELECT
+		0PROJECT
+		RENAME
+	Relational algebra operations from set theory
+		UNION
+		INTERSECTION
+		DIFFERENCE
+		CARESIAN PRODUCT
+	Binary relational operations
+		JOIN
+		DIVISION
+	Additional relational operations
+		OUTER JOINS
+		 OUTER UNION
+		AGGREGATE FUNCTIONS:
+			SUM
+			COUNT
+			AVG
+			MIN
+			MAX
+
+{{./pasted_image.png}}
+
+
+PROJECT operations is denoted by pi
+	This operation keeps certain columns from a relation and discards the other columns
+	Creates a vertical partitioning
+		List of specified columns is kept in each tuple
+		The other attributes in each tuple are discarded
+	The project operation removes any du0plicate tuples
+		Mathematical sets do not alow suplicate elemnts.
+		
+	SQL version: SELECT lname, fname, salary from Employee;
+	SELECT = PROJECT
+	SELECT DISTINCT is the projection.
+
+Just a side note, if we have a relational set A(i,j), the operation SELECT * FROM A; == SELECT I-J FROM A;
+
+We may want to appl.y several relational algebra operations one after the other
+	Either we do it altogether in one query
+		Relational algebra expression
+	or we do it line by line in multiple queries
+		intermediate result relations
+	Effeciency is of no importance
+
+
+Unary relational operator RENAME
+	The general RENAME operation can be expressed by any of the following forms
+		R changes:
+			the relation name only to S
+		R changes both:
+			relation name to S and
+			the column names to B1, B2, Bn
+		R changes
+			column names only to B1, B23, Bn
+	SQL:
+		SELECT i AS number from A;
+			A(i) -> A(number)
+
+
+UNION Operation
+	Duplicate utuples are elminated
+	two operand relatiomns R and S must be "type compatible"
+	SQL:
+		SELECT * from A UNION SELECT * from B;
+	**commutative**
+INTERSECT operation
+	returns what the two sets have in common
+	SQL:
+		SELECT * from A INTERSECT SELECT * from B;
+	**commutative**
+
+DIFFERENCE operation
+	EXCEPT == DIFFERENCE
+	**non commutative**
+	
+CARTESIAN PRODUCT
+	this operation is used to combine tuples form two relations in a combinatorial fashion
+	denoted by R(A1, A2, An) x S(B1, B2, Bm)
+	RESULT:
+		Q(A1, A2, An, B1, B2, Bm)
+	Hence, if R has n tuples, and S has m tuples, then R x S has m  * n tuples.
+	EX:
+		A(i) - 
+		1
+		2
+		3
+		B(i) -
+		4
+		5
+		AXB -
+		1 4
+		1 5
+		2 4
+		2 5
+		3 4
+		3 5
+	Generally not a meaningful operation, needs other operations to be meaningful{{./pasted_image002.png}}
+	If we have n tuples, after the operation, we will have n^2 tuples
+
+
+
+JOIN Operations
+	The sequence of cartesian prodect followed by select is used quite commonly to identify and select related tuples from two relatoins.
+	A special operation, called JO\I\N combines this sequence into a single operation
+	This operation is very important for any relational database with more than as ingle relation, because it allows us to combine related tuples form various relations
+	General for is:
+		R JOIN <join condition> S
+	All this is is a cartesian product but with a comdition.
+	R join S= sigma_{R.K=S.K)(R X S)
+	In reality, the JOIN operation is just a  cartesian product and an intersection
+	{{./pasted_image003.png}}
+	
+EQUIJOIN Operation
+	Most common use of join involves join conditions with equality comparisons
+	It is still the JOIN operater in SQL, just with equality condition
+
+NATURAL JOIN
+	Another variaition of JOIN. 
+	Created to get rid of the second attribute in an EQUIJOIN condition
+	Comparisons must be of same type
+
+
+Operations to remember
+
+{{./pasted_image004.png}}
+
+
+
+
+
+Aggregate functions
+	A types of request that cannot be expressed in the basic relational algebra is to specify mathematical aggregate funcitons on collections of values from the database
+	curly F --> pi
+	{{./pasted_image005.png}}
+	pi==SELECT DISTINCT
+	pi+aggregations==SELECT GROUP BY
+
+
+GROUPING
+	SQL command: GROUP BY
+	EX:
+		SELECT DNO, COUNT (*), AVG (SALARY)
+		FROM EMPLOYEE
+		GROUP BY DNO
+	The employee tuples are divided into groups based on DNO.
+
+
+HAVING
+	EX:
+		SELECT PNUMBER, PNAM, COUNT(*)
+		FROM PROJECT, WORKS_ON
+		WHERE PNUMBER=PNO
+		GROUP BY PNUMBER, PNAME
+		HAVING COUNT (*) > 2
+		
+
+
+

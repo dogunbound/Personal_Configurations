@@ -1,0 +1,77 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-08-27T16:05:20-05:00
+
+====== S0 complexity ======
+Created Thursday 27 August 2020
+{{./pasted_image.png}}
+
+{{./pasted_image001.png}} big theta, big O, big omega, little o, little omega                                 We do this because it suies best for our things   {{./pasted_image004.png}}
+
+big theta is a function with bounds on both top and bottom:
+{{./pasted_image002.png}}
+
+Big Omega is bounded just from below
+{{./pasted_image005.png}}
+
+
+
+
+
+Theorem
+
+{{./pasted_image006.png}}
+
+
+little-o
+
+{{./pasted_image007.png}}{{./pasted_image008.png}}
+
+
+
+{{./pasted_image009.png}}
+
+
+
+
+
+
+
+
+
+
+
+A good to note
+
+
+
+
+
+
+
+
+
+{{./pasted_image010.png}}
+
+
+
+
+
+
+
+{{./pasted_image011.png}}{{./pasted_image012.png}}
+{{./pasted_image013.png}}{{./pasted_image014.png}}S{{./pasted_image015.png}}
+{{./pasted_image016.png}}
+
+
+
+
+
+
+
+
+we need logn bits to represent n. 
+
+unbounded numbers = LOGN
+
+
