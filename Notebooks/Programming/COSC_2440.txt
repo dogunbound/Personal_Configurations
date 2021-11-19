@@ -1,7 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.6
-Creation-Date: 2020-08-24T16:12:54-05:00
-
-====== COSC 2440 ======
-Created Monday 24 August 2020
-
