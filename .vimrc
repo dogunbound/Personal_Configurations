@@ -1,7 +1,3 @@
-call plug#begin('~/.vim/plugged')
-Plug 'maxmellon/vim-jsx-pretty'
-call plug#end()
-
 " For ESLint
 let g:ale_fixers = {
 \	'javascript': ['eslint']
@@ -26,6 +22,9 @@ syntax enable
 syntax on
 set number
 set ai
+set foldmethod=indent
+set foldlevel=1
+set foldopen=all
 
 filetype plugin indent on								" Autoindent
 set smartindent
@@ -63,3 +62,5 @@ nnoremap <F7>h : w<Esc>: e %:r.h<Enter>
 " Javascript mappings
 inoremap {c); {<Esc>o<Esc>i});<Esc>k$a
 inoremap {C); {<Esc>o<Esc>i});<Esc>k$a
+inoremap {c) {<Esc>o<Esc>i})<Esc>k$a
+inoremap {C) {<Esc>o<Esc>i})<Esc>k$a
