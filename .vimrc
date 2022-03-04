@@ -39,6 +39,15 @@ Plug '~/my-prototype-plugin'
 
 Plug 'maxmellon/vim-jsx-pretty'
 
+
+
+
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'dense-analysis/ale'
+Plug 'rust-lang/rust.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -52,6 +61,24 @@ let g:ale_sign_warning = '⚠️'
 
 let g:ale_fix_on_save = 1
 
+" For rust
+
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1
+autocmd BufNewFile,BufRead *.rs set filetype=rust
+
+let g:ale_linters = {
+\  'rust': ['analyzer'],
+\}
+
+let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
+
+" Optional, configure as-you-type completions
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1
+
+nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
+
 " This is for YCM
 set encoding=utf-8
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
@@ -60,9 +87,7 @@ let g:ycm_max_diagnostics_to_display = 0
 let g:ycm_show_diagnostics_ui = 0
 
 " Fix programming structure with default vim options
-filetype plugin on
 set nocompatible
-syntax enable
 syntax on
 set number
 set ai
@@ -70,6 +95,7 @@ set foldmethod=indent
 set foldlevel=1
 set foldopen=all
 
+syntax enable
 filetype plugin indent on								" Autoindent
 set smartindent
 autocmd Bufread,BufWritePre *.sh normal gg=G
