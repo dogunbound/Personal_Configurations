@@ -92,7 +92,7 @@ syntax on
 set number
 set ai
 set foldmethod=indent
-set foldlevel=1
+set foldlevel=0
 set foldopen=all
 
 syntax enable
