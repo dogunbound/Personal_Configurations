@@ -8,6 +8,7 @@ alias ls='ls --color=auto'
 alias ivm='gvim -v'
 alias vim='gvim -v'
 alias clipboard='xclip -selection clipboard'
+alias orpie='opam exec orpie' # This is fedora specific
 PS1='[\u@\h \W]\$ '
 
 export EDITOR=vim
