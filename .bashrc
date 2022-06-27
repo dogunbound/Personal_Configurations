@@ -5,8 +5,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias ivm='gvim -v'
-alias vim='gvim -v'
+alias ivm='vim'
 alias clipboard='xclip -selection clipboard'
 alias orpie='opam exec orpie' # This is fedora specific
 PS1='[\u@\h \W]\$ '
