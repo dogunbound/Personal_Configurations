@@ -94,6 +94,7 @@ set ai
 set foldmethod=indent
 set foldlevel=0
 set foldopen=all
+set hlsearch
 
 syntax enable
 filetype plugin indent on								" Autoindent
