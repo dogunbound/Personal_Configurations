@@ -95,6 +95,7 @@ set foldmethod=indent
 set foldlevel=0
 set foldopen=all
 set hlsearch
+setlocal scrolloff=2
 
 syntax enable
 filetype plugin indent on								" Autoindent
@@ -135,3 +136,6 @@ inoremap {c); {<Esc>o<Esc>i});<Esc>k$a
 inoremap {C); {<Esc>o<Esc>i});<Esc>k$a
 inoremap {c) {<Esc>o<Esc>i})<Esc>k$a
 inoremap {C) {<Esc>o<Esc>i})<Esc>k$a
+
+" BAD BOY MAPS
+map <silent> vd :echoerr "NO USE 'x' INSTEAD"<CR>
