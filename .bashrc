@@ -11,6 +11,14 @@ alias clipboard='xclip -selection clipboard'
 alias orpie='opam exec orpie' # This is fedora specific
 PS1='[\u@\h \W]\$ '
 
+function cd_up() {
+  cd $(printf "%0.s../" $(seq 1 $1 ));
+}
+alias 'cd..'='cd_up'
+
+# RUST stuff
+alias cargo_small_check='cargo check --message-format short'
+
 export EDITOR=vim
 
 export NVM_DIR="$HOME/.nvm"
