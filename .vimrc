@@ -138,4 +138,4 @@ inoremap {c) {<Esc>o<Esc>i})<Esc>k$a
 inoremap {C) {<Esc>o<Esc>i})<Esc>k$a
 
 " BAD BOY MAPS
-map <silent> vd :echoerr "NO USE 'x' INSTEAD"<CR>
+nmap <silent> vd :echoerr "NO USE 'x' INSTEAD"<CR>
