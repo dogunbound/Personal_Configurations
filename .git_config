@@ -1,2 +1,2 @@
-git config --global alias.co checkout
-git config --global alias.b branch
+git config --global alias.co checkout --replace-all
+git config --global alias.b 'branch -v' --replace-all
